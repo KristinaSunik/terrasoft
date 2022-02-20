@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -10,6 +8,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            string path = @"https://www.cbr-xml-daily.ru/daily_json.js";
+            List<Valute> valutes = ParserJSON.GetValutes(path);
+
+            Console.WriteLine($"USD = {valutes.FirstOrDefault(x => x.CharCode == "USD").Value}");
+            Console.ReadKey();
         }
     }
 }
