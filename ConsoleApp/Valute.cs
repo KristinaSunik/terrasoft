@@ -1,7 +1,7 @@
 ﻿
 namespace ConsoleApp
 {
-    class Valute
+    public class Valute
     {
         public string ID { get; set; }
         public string NumCode { get; set; }

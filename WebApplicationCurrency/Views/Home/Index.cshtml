@@ -1,0 +1,48 @@
+﻿@model List<ValueViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    @if (Model != null && Model.Count != 0)
+    {
+        int counter = 1;
+        <h3 class="text-center my-4"></h3>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">NumCode</th>
+                    <th scope="col">CharCode</th>
+                    <th scope="col">Nominal</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">Previous</th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@item.ID</td>
+                        <td>@item.NumCode</td>
+                        <td>@item.CharCode</td>
+                        <td>@item.Nominal</td>
+                        <td>@item.Name</td>
+                        <td>@item.Value</td>
+                        <td>@item.Previous</td>
+                    </tr>
+                </tbody>
+                counter++;
+            }
+        </table>
+    }
+    else
+    {
+        <h5> Не удалось получить данные о валютах...</h5>
+    }
+</div>

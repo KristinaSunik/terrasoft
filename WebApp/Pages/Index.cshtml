@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        <button class="btn btn-secondary my-1" asp-controller="currency" asp-action="get"  role="button">Get current currency</button>
+    </h1>
+</div>

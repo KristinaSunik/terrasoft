@@ -5,7 +5,7 @@ using System.IO;
 
 namespace ConsoleApp
 {
-    static class ParserJSON
+    public static class ParserJSON
     {
         public static List<Valute> GetValutes(string path)
         {
